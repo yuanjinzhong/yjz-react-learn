@@ -25,7 +25,7 @@ class TodoList extends React.Component {
         this.handleItemClick = this.handleItemClick.bind(this);//这个this代表的父组件
     };
 
-    //点击add按钮新增待办事项
+//点击add按钮新增待办事项
     handleButtonClick() {
         /* 更新react组件的属性时需要使用setState方法
            可以更新对象的多个属性
@@ -47,23 +47,26 @@ class TodoList extends React.Component {
         })
         /*此方法更新属性时无法实时刷新的
         this.state.list.push("hello world")*/
-    };
+    }
+    ;
 
-    //取文本框的值
+//取文本框的值
     handleValueChange(e) {
         this.setState({inputValue: e.target.value})
-    };
+    }
+    ;
 
-    //点击代办事项删除之
+//点击代办事项删除之
     handleItemClick(index) {
         const list = [...this.state.list]
         list.splice(index, 1)
         /*this.setState({list: list})
         key 和value一样的时候可以省略一个*/
         this.setState({list})
-    };
+    }
+    ;
 
-    //获取todoList的明细
+//获取todoList的明细
     getTodoItem() {
         return (
             this.state.list.map((item, index) => {
