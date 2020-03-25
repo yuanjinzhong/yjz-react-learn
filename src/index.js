@@ -16,9 +16,12 @@ import  SignIn from './SignIn'
 //侧边登陆页
 import  SignInSide  from './SignInSide'
 
+//hook学习
+import Example from './Hook'
+
 import './style.css'
 
 const element = <Welcome name="yuanjinzhong">haha</Welcome>//目前还没学到类是vue的插槽,所以haha还不知道如何渲染
 
-ReactDOM.render(<SignInSide/>, document.getElementById('root'));
+ReactDOM.render(<Example/>, document.getElementById('root'));
 
