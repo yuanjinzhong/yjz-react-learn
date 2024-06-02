@@ -87,7 +87,7 @@ class Content extends React.Component {
             paddingTop: "11px"
         }
         var userImg = {
-            diaplay: "inline-block",
+            display: "inline-block",
             width: "30px",
             marginRight: "6px"
         }
