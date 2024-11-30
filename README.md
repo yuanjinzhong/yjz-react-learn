@@ -66,3 +66,45 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+***
+### packjson文件说明
+```json
+{
+  "name": "todolist",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.9.7", //npm 的版本号遵循 SemVer（Semantic Versioning） 规范，格式为 MAJOR.MINOR.PATCH
+    "rc-easyui": "^1.0.35", /* 指定版本范围,可以使用1之后的小版本,但是版本不能超过1; 首次执行 npm install 是会生产package-lock.json锁定版本 */
+    "react": "^16.10.1",   // 当执行npm update的时候,如果package.json中是可变版本,则会选择可变范围内最新的版本,并且写入package-lock.json; 并且在本项目中的node_modules中安装对应的版本
+    "react-dom": "^16.10.1",
+    "react-scripts": "3.1.2"// 这个节点通常不需要自己配置,比如:执行 npm install zustand
+    /* 安装完成后，npm 会自动更新 package.json 文件中的 dependencies 部分，并生成或更新 package-lock.json 文件，锁定实际安装的版本。  并且在本项目中的node_modules中安装对应的库 */
+
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
+
+```
